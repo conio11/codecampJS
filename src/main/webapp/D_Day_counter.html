@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>D-Day-counter</title>
 		<link rel="stylesheet" href="./style.css">
-		<script src="./script.js"></script>
+		<script src="./script.js" defer></script> <!-- script 내 defer 속성: HTML 문서의 파싱, 렌더링 계속 진행  -->
 	</head>
 	<body>
 		<h1>D-Day</h1>
@@ -26,11 +26,13 @@
 				<span>초</span>
 			</div>
 		</div>
-		<div id="target-selector">
+		<div id="d-day-message"></div>
+		<div id="target-selector id">
 			<input id="target-year-input" class="target-input" size="5"> - 
 			<input id="target-month-input" class="target-input" size="5"> - 
 			<input id="target-date-input" class="target-input" size="5">
 		</div>	
 		<button onclick="counterMaker()" id="start-btn">카운트다운 시작</button>
+		<!-- <script src="./script.js"></script> <head> 태그 안에 있을 경우 오류 발생하기도  -->
 	</body>
 </html>
